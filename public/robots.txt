@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://lifecoachingkit.store/sitemap.xml
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Crawl-delay for slower bots
+User-agent: AhrefsBot
+Crawl-delay: 5
+
+User-agent: SemrushBot
+Crawl-delay: 5

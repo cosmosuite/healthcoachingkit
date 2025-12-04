@@ -1,0 +1,17 @@
+{
+  "name": "Health Coaching Kit - Health and Wellness Branding Toolkit",
+  "short_name": "Health Coaching Kit",
+  "description": "Complete digital health and wellness coaching business toolkit with 2,000+ customizable Canva templates with pre-written content for branding, client management, workbooks, and social media",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#7F8D74",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}
