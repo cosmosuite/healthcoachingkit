@@ -36,8 +36,8 @@ export default function Home() {
     const getCheckoutUrl = () => {
         if (typeof window === 'undefined') {
             return currency === 'INR'
-                ? 'https://in-checkout.lifecoachingkit.store/branding-bundle'
-                : 'https://checkout.lifecoachingkit.store/branding-bundle';
+                ? 'https://in-checkout.healthcoachingkit.store/checkout'
+                : 'https://checkout.healthcoachingkit.store/checkout';
         }
 
         const urlParams = new URLSearchParams(window.location.search);
@@ -62,8 +62,8 @@ export default function Home() {
         });
 
         const baseUrl = currency === 'INR'
-            ? 'https://in-checkout.lifecoachingkit.store/branding-bundle'
-            : 'https://checkout.lifecoachingkit.store/branding-bundle';
+            ? 'https://in-checkout.healthcoachingkit.store/checkout'
+            : 'https://checkout.healthcoachingkit.store/checkout';
         const queryString = utmParams.toString();
 
         return queryString ? `${baseUrl}?${queryString}` : baseUrl;
