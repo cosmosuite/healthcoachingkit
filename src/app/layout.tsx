@@ -169,9 +169,6 @@ rdt('track','PageVisit');
           }}
         />
 
-        {/* Shown.io Metrics */}
-        <script defer src="https://shown.io/metrics/jE3kaxMO9Z" type="text/javascript" />
-
       </head>
       <body className="antialiased">
         <CurrencyProvider>
