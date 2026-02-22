@@ -112,7 +112,7 @@ export default function Home() {
         {
             title: "Business Branding & Essentials",
             description: "Establish a professional foundation with everything you need to look the part from day one.",
-            image: "/assets/healthcoaching/All Business Essentials.avif",
+            image: "/assets/healthcoaching/business-essentials.webp",
             items: [
                 "73 Page Business Plan",
                 "Logos",
@@ -125,7 +125,7 @@ export default function Home() {
         {
             title: "Client Onboarding & Offboarding",
             description: "Create a seamless, premium experience for your clients from the moment they sign up.",
-            image: "/assets/healthcoaching/Client Forms + Client On:Off Boarding Form.avif",
+            image: "/assets/healthcoaching/client-forms-onboarding.webp",
             items: [
                 "32 Client Intake Forms",
                 "61 Page Client Onboarding Pack",
@@ -137,7 +137,7 @@ export default function Home() {
         {
             title: "Coaching Resources & Workbooks",
             description: "Empower your clients with professionally designed tools to facilitate their transformation.",
-            image: "/assets/healthcoaching/Client Workbooks.avif",
+            image: "/assets/healthcoaching/client-workbooks.webp",
             items: [
                 "114 Client Worksheets",
                 "54 Page Health and Wellness Jumpstart Workbook",
@@ -149,7 +149,7 @@ export default function Home() {
         {
             title: "Social Media & Marketing Templates",
             description: "Never run out of content ideas. Engage your audience across all major platforms.",
-            image: "/assets/healthcoaching/Social media Templates .webp",
+            image: "/assets/healthcoaching/social-media-templates.webp",
             items: [
                 "1,000 Instagram Templates (Posts, Stories, Carousels)",
                 "195 Pinterest Templates (3 sizes)",
@@ -161,7 +161,7 @@ export default function Home() {
         {
             title: "Lead Magnets & Business Essentials",
             description: "Grow your list and manage your business with ease.",
-            image: "/assets/healthcoaching/Client Worksheet + LKead Magnets .avif",
+            image: "/assets/healthcoaching/client-worksheets-lead-magnets.webp",
             items: [
                 "143 Lead Magnet Templates",
                 "Client Checklists",
@@ -217,19 +217,23 @@ export default function Home() {
     ];
 
     const productImages = [
-        "/assets/healthcoaching/All Business Essentials.avif",
-        "/assets/healthcoaching/Client Forms + Client On:Off Boarding Form.avif",
-        "/assets/healthcoaching/Client Workbooks.avif",
-        "/assets/healthcoaching/Social media Templates .webp",
-        "/assets/healthcoaching/Client Worksheet + LKead Magnets .avif",
-        "/assets/healthcoaching/What's Inside.avif",
-        "/assets/healthcoaching/Hero Image .avif",
-        "/assets/healthcoaching/Instagram Templates .avif"
+        "/assets/healthcoaching/business-essentials.webp",
+        "/assets/healthcoaching/client-forms-onboarding.webp",
+        "/assets/healthcoaching/client-workbooks.webp",
+        "/assets/healthcoaching/social-media-templates.webp",
+        "/assets/healthcoaching/client-worksheets-lead-magnets.webp",
+        "/assets/healthcoaching/whats-inside.webp",
+        "/assets/healthcoaching/hero-image.webp",
+        "/assets/healthcoaching/instagram-templates.webp",
+        "/assets/healthcoaching/hero-overview.webp",
+        "/assets/healthcoaching/brand-board.webp",
+        "/assets/healthcoaching/final-cta.webp",
+        "/assets/healthcoaching/how-it-works.webp",
     ];
 
     // Split images for marquee
-    const row1Images = productImages.slice(0, 4);
-    const row2Images = productImages.slice(4, 8);
+    const row1Images = productImages.slice(0, 6);
+    const row2Images = productImages.slice(6, 12);
 
     return (
         <div className="min-h-screen bg-background font-sans selection:bg-primary/20 selection:text-primary-foreground overflow-x-hidden">
@@ -336,12 +340,12 @@ export default function Home() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}
-                            className="rounded-xl md:rounded-2xl overflow-hidden shadow-2xl border-4 md:border-8 border-white"
+                            className="rounded-xl md:rounded-2xl overflow-hidden shadow-2xl border-4 md:border-8 border-white aspect-square"
                         >
                             <img
-                                src="/assets/healthcoaching/Hero Image .avif"
+                                src="/assets/healthcoaching/hero-image.webp"
                                 alt="Health and Wellness Branding Toolkit Hero"
-                                className="w-full h-auto"
+                                className="w-full h-full object-cover"
                             />
                         </motion.div>
                         {/* Floating Badge */}
@@ -378,7 +382,7 @@ export default function Home() {
                                 {[...row1Images, ...row1Images, ...row1Images].map((image, index) => (
                                     <div
                                         key={index}
-                                        className="relative flex-shrink-0 w-[280px] md:w-[320px] group overflow-hidden rounded-lg border-2 border-border hover:border-primary/50 transition-all hover:shadow-lg aspect-[4/3]"
+                                        className="relative flex-shrink-0 w-[280px] md:w-[320px] group overflow-hidden rounded-lg border-2 border-border hover:border-primary/50 transition-all hover:shadow-lg aspect-square"
                                     >
                                         <img
                                             src={image}
@@ -397,7 +401,7 @@ export default function Home() {
                                 {[...row2Images, ...row2Images, ...row2Images].map((image, index) => (
                                     <div
                                         key={index}
-                                        className="relative flex-shrink-0 w-[280px] md:w-[320px] group overflow-hidden rounded-lg border-2 border-border hover:border-primary/50 transition-all hover:shadow-lg aspect-[4/3]"
+                                        className="relative flex-shrink-0 w-[280px] md:w-[320px] group overflow-hidden rounded-lg border-2 border-border hover:border-primary/50 transition-all hover:shadow-lg aspect-square"
                                     >
                                         <img
                                             src={image}
@@ -452,50 +456,35 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* 4. What's Included (Summary) */}
-            <section className="py-12 md:py-24 px-4 md:px-6 bg-gradient-to-b from-background to-secondary/5">
+            {/* 4. What's Inside Section */}
+            <section className="py-12 md:py-24 px-4 md:px-6 bg-background">
                 <div className="max-w-7xl mx-auto">
-                    <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
+                    <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
                         <div className="order-2 lg:order-1">
                             <Badge variant="secondary" className="mb-3 md:mb-4 text-sm md:text-base px-3 md:px-4 py-1.5 md:py-2 bg-primary/10 text-primary border-none">
-                                <Heart className="w-3 h-3 md:w-4 md:h-4 mr-1.5 md:mr-2 inline" />
+                                <FileText className="w-3 h-3 md:w-4 md:h-4 mr-1.5 md:mr-2 inline" />
                                 What's Included
                             </Badge>
-
-                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold mb-4 md:mb-6">
+                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-foreground mb-4 md:mb-6 px-0">
                                 Transform Your Business with One Toolkit
                             </h2>
 
                             <div className="space-y-4 md:space-y-6 mb-6 md:mb-8">
-                                <div className="flex items-start gap-3 md:gap-4">
-                                    <div className="flex-shrink-0 w-7 h-7 md:w-8 md:h-8 rounded-full bg-primary/20 flex items-center justify-center">
-                                        <Check className="w-4 h-4 md:w-5 md:h-5 text-primary" />
+                                {[
+                                    { title: "Complete Branding Suite", desc: "73-page business plan, logos, brand boards, business cards, and email signatures to look professional instantly." },
+                                    { title: "Client Management System", desc: "32 client intake forms, 61-page onboarding pack, and 48-page offboarding pack to impress your clients." },
+                                    { title: "Coaching Tools & Workbooks", desc: "114 client worksheets, Health and Wellness Jumpstart Workbook, and Wheel of Life Workbook to facilitate client transformation." }
+                                ].map((item, index) => (
+                                    <div key={index} className="flex gap-3 md:gap-4">
+                                        <div className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                                            <Check className="w-4 h-4 md:w-5 md:h-5 text-primary" />
+                                        </div>
+                                        <div>
+                                            <h3 className="text-base md:text-lg font-semibold mb-0.5 md:mb-1">{item.title}</h3>
+                                            <p className="text-sm md:text-base text-muted-foreground">{item.desc}</p>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h3 className="font-serif text-lg md:text-xl font-semibold mb-1">Complete Branding Suite</h3>
-                                        <p className="text-base md:text-base text-muted-foreground">73-page business plan, logos, brand boards, business cards, and email signatures to look professional instantly.</p>
-                                    </div>
-                                </div>
-
-                                <div className="flex items-start gap-3 md:gap-4">
-                                    <div className="flex-shrink-0 w-7 h-7 md:w-8 md:h-8 rounded-full bg-primary/20 flex items-center justify-center">
-                                        <Check className="w-4 h-4 md:w-5 md:h-5 text-primary" />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-serif text-lg md:text-xl font-semibold mb-1">Client Management System</h3>
-                                        <p className="text-base md:text-base text-muted-foreground">32 client intake forms, 61-page onboarding pack, and 48-page offboarding pack to impress your clients.</p>
-                                    </div>
-                                </div>
-
-                                <div className="flex items-start gap-3 md:gap-4">
-                                    <div className="flex-shrink-0 w-7 h-7 md:w-8 md:h-8 rounded-full bg-primary/20 flex items-center justify-center">
-                                        <Check className="w-4 h-4 md:w-5 md:h-5 text-primary" />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-serif text-lg md:text-xl font-semibold mb-1">Coaching Tools & Workbooks</h3>
-                                        <p className="text-base md:text-base text-muted-foreground">114 client worksheets, Health and Wellness Jumpstart Workbook, and Wheel of Life Workbook to facilitate client transformation.</p>
-                                    </div>
-                                </div>
+                                ))}
                             </div>
 
                             <Separator className="my-6 md:my-8" />
@@ -517,11 +506,11 @@ export default function Home() {
                         </div>
 
                         <div className="relative order-1 lg:order-2">
-                            <div className="rounded-xl md:rounded-2xl overflow-hidden shadow-2xl border-2 md:border-4 border-white">
+                            <div className="rounded-xl md:rounded-2xl overflow-hidden shadow-2xl border-2 md:border-4 border-white aspect-square">
                                 <img
-                                    src="/assets/healthcoaching/What's Inside.avif"
+                                    src="/assets/healthcoaching/whats-inside.webp"
                                     alt="What's included in the toolkit"
-                                    className="w-full h-auto"
+                                    className="w-full h-full object-cover"
                                     loading="lazy"
                                 />
                             </div>
@@ -566,11 +555,11 @@ export default function Home() {
                                         transition={{ duration: 0.8 }}
                                         className={`relative ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}
                                     >
-                                        <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white">
+                                        <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white aspect-square">
                                             <img
                                                 src={product.image}
                                                 alt={product.title}
-                                                className="w-full h-auto transform hover:scale-105 transition-transform duration-700"
+                                                className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
                                             />
                                         </div>
                                         {/* Decorative background blob */}
@@ -722,11 +711,11 @@ export default function Home() {
                         </div>
 
                         <div className="relative order-1 lg:order-2">
-                            <div className="rounded-xl md:rounded-2xl overflow-hidden shadow-2xl border-2 md:border-4 border-white">
+                            <div className="rounded-xl md:rounded-2xl overflow-hidden shadow-2xl border-2 md:border-4 border-white aspect-square">
                                 <img
-                                    src="/assets/healthcoaching/Instagram Templates .avif"
+                                    src="/assets/healthcoaching/instagram-templates.webp"
                                     alt="Bonus Content"
-                                    className="w-full h-auto"
+                                    className="w-full h-full object-cover"
                                     loading="lazy"
                                 />
                             </div>
@@ -775,7 +764,13 @@ export default function Home() {
                     </div>
 
                     <div className="mt-16 max-w-3xl mx-auto">
-                        <img src="/assets/healthcoaching/How It Works.avif" alt="How it works visual guide" className="w-full h-auto rounded-xl shadow-lg border border-border" />
+                        <div className="rounded-xl overflow-hidden shadow-lg border border-border aspect-square">
+                            <img
+                                src="/assets/healthcoaching/how-it-works.webp"
+                                alt="How it works visual guide"
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
                     </div>
 
                     <div className="text-center mt-10 md:mt-16">
@@ -896,38 +891,15 @@ export default function Home() {
 
                     <div className="flex flex-wrap justify-center gap-3 md:gap-6 text-sm md:text-base text-muted-foreground mb-5 md:mb-6 px-4">
                         <a href="#" className="hover:text-foreground transition-colors">Contact Us</a>
-                        <span className="hidden sm:inline">•</span>
-                        <a href="#" className="hover:text-foreground transition-colors">Terms of Use</a>
-                        <span className="hidden sm:inline">•</span>
-                        <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>
+                        <a href="/terms" className="hover:text-foreground transition-colors">Terms of Use</a>
+                        <a href="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</a>
                     </div>
 
-                    <p className="text-sm md:text-base text-muted-foreground">
-                        © 2025 Health Coaching Kit. All rights reserved.
+                    <p className="text-xs md:text-sm text-muted-foreground/60">
+                        © {new Date().getFullYear()} Health Coaching Kit. All rights reserved.
                     </p>
                 </div>
             </footer>
-
-            {/* Sticky Mobile Checkout Bar */}
-            <div className="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t-2 border-primary/20 shadow-lg z-50 md:hidden">
-                <div className="px-4 py-3 flex items-center justify-between gap-3">
-                    <div className="flex-shrink-0">
-                        <div className="text-2xl font-serif font-bold text-foreground">
-                            {currency === "USD" && (
-                                <span className="line-through text-muted-foreground text-lg mr-2">$297</span>
-                            )}
-                            {currency === "INR" && (
-                                <span className="line-through text-muted-foreground text-lg mr-2">₹2,999</span>
-                            )}
-                            {formatPrice(9)} only
-                        </div>
-                    </div>
-                    <Button size="lg" className="bg-[#6b7762] hover:bg-[#5a6554] text-white rounded-full shadow-lg text-base py-5 px-6" onClick={handleCheckoutRedirect}>
-                        <Download className="w-4 h-4 mr-2" />
-                        Get Access
-                    </Button>
-                </div>
-            </div>
         </div>
     );
 }
